@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ===== Tokens semânticos — MODO CLARO (base da página) ===== */
+  :root {
+    --page-bg: #fbfcf9; /* near-white do site da escola */
+    --band-bg: #f3eee3; /* faixa de seção alternada */
+    --card-bg: #ffffff;
+    --text: #2a2014; /* marrom escuro, corpo */
+    --muted: #6f6149;
+    --accent: #b08030; /* gold */
+    --accent-strong: #8a6420; /* gold-deep — acento de texto sobre claro */
+    --border: #e3d7bf; /* tan suave */
+    --quote-color: #8a6420;
+    --quote-border: #b08030;
+    --card-shadow: 0 6px 20px rgba(60, 40, 10, 0.08);
+    --photo-bg: linear-gradient(160deg, #ffffff, #f1e9d8);
+    --cta-bg: #b08030;
+    --cta-bg-hover: #8a6420;
+    --cta-text: #1a130b;
+    --hairline: rgba(112, 64, 16, 0.18);
+  }
+
+  /* ===== Override — seções em TOM ESCURO (Prova, CTA final) ===== */
+  .tone-dark {
+    --page-bg: #0e0b08;
+    --band-bg: #100b07;
+    --card-bg: #1a130b; /* surface */
+    --text: #f5efe2; /* areia clara */
+    --muted: #b8ac95;
+    --accent: #b08030;
+    --accent-strong: #e0d090; /* gold-light — acento de texto sobre escuro */
+    --border: #704010; /* bronze */
+    --quote-color: #e0d090;
+    --quote-border: #b08030;
+    --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 24px rgba(176, 128, 48, 0.18);
+    --photo-bg: linear-gradient(160deg, #15100a, #0b0805);
+    --cta-bg: #b08030;
+    --cta-bg-hover: #e0d090;
+    --cta-text: #1a130b;
+    --hairline: rgba(112, 64, 16, 0.45);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background: var(--page-bg);
+    color: var(--text);
+    @apply font-body antialiased;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold;
+    line-height: 1.15;
+    color: var(--text);
+  }
+}
+
+@layer components {
+  /* Wrappers de largura */
+  .wrap {
+    @apply mx-auto px-[22px];
+    max-width: 720px;
+  }
+  .wrap.narrow {
+    max-width: 640px;
+  }
+
+  /* Faixa de seção / tom escuro pintam o próprio fundo */
+  .band {
+    background: var(--band-bg);
+  }
+  .tone-dark {
+    background: var(--page-bg);
+    color: var(--text);
+  }
+
+  /* Eyebrow */
+  .eyebrow {
+    @apply font-eyebrow uppercase;
+    color: var(--accent-strong);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+  }
+
+  /* CTA */
+  .cta {
+    @apply inline-block font-body font-semibold rounded-pill text-center no-underline;
+    background: var(--cta-bg);
+    color: var(--cta-text);
+    max-width: 100%;
+    white-space: normal;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    padding: 16px 26px;
+    transition: box-shadow 0.25s, transform 0.15s, background 0.2s;
+  }
+  .cta:hover {
+    background: var(--cta-bg-hover);
+    box-shadow: 0 0 24px rgba(176, 128, 48, 0.3);
+    transform: translateY(-1px);
+  }
+  @screen sm {
+    .cta {
+      font-size: 17px;
+      padding: 17px 34px;
+    }
+  }
+
+  /* Quote verbatim */
+  .quote {
+    @apply font-display italic;
+    color: var(--quote-color);
+    border-left: 3px solid var(--quote-border);
+    padding: 6px 0 6px 22px;
+    margin: 26px 0;
+    font-size: 23px;
+    line-height: 1.35;
+  }
+
+  /* Card */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    @apply rounded-md;
+    padding: 24px 26px;
+  }
+
+  /* Placeholder de foto / vídeo */
+  .photo {
+    background: var(--photo-bg);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow);
+    color: var(--muted);
+    @apply rounded-md;
+  }
+
+  /* Texto auxiliar */
+  .text-muted-token {
+    color: var(--muted);
+  }
+  .text-accent-strong {
+    color: var(--accent-strong);
+  }
+
+  /* Listas com marcador */
+  ul.check,
+  ul.cross,
+  ul.bullets {
+    @apply list-none;
+    margin: 0 0 18px;
+  }
+  ul.check li,
+  ul.cross li,
+  ul.bullets li {
+    @apply relative;
+    padding-left: 30px;
+    margin-bottom: 14px;
+  }
+  ul.check li::before {
+    content: "✓";
+    @apply absolute left-0 top-0 font-bold;
+    color: var(--accent);
+  }
+  ul.cross li::before {
+    content: "✗";
+    @apply absolute left-0 top-0 text-danger font-bold;
+  }
+  ul.bullets li::before {
+    content: "✦";
+    @apply absolute left-0 top-0;
+    color: var(--accent);
+  }
+}
