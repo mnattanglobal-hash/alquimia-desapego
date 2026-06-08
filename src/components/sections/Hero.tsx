@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="bg-hero-glow text-center pt-9 pb-16 md:pb-[84px]">
       <div className="wrap">
         <img
-          src="/img/Alquimia-Logo-Horizontal-Gold.png"
+          src="img/Alquimia-Logo-Horizontal-Gold.png"
           alt="Escola de Alquimia Ascensional"
           className="mx-auto h-auto w-[200px] sm:w-[224px] mb-6"
         />

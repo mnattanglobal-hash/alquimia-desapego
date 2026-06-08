@@ -11,7 +11,7 @@ export default function Oferta() {
       </h2>
 
       <img
-        src="/img/mockup_desapego_celular.png"
+        src="img/mockup_desapego_celular.png"
         alt="Desapego de Uma Vez no celular"
         className="block w-full max-w-[300px] mx-auto h-auto rounded-md border border-[color:var(--border)] shadow-[var(--card-shadow)] mb-7"
       />
@@ -49,7 +49,7 @@ export default function Oferta() {
       {/* Garantia */}
       <div className="text-center mt-12">
         <img
-          src="/img/selo_garantia_incondicional.png"
+          src="img/selo_garantia_incondicional.png"
           alt="Selo de garantia incondicional de 7 dias"
           className="block w-[140px] h-auto mx-auto mb-[18px]"
         />

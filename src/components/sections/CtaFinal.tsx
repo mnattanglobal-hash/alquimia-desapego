@@ -13,7 +13,7 @@ export default function CtaFinal() {
     >
       <div className="wrap narrow">
         <img
-          src="/img/Alquimia-Logo-Horizontal-OffWhite.png"
+          src="img/Alquimia-Logo-Horizontal-OffWhite.png"
           alt="Escola de Alquimia Ascensional"
           className="mx-auto h-auto w-[180px] sm:w-[200px] mb-7"
         />
