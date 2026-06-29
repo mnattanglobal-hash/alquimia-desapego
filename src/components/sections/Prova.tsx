@@ -18,19 +18,22 @@ const numeros = [
   },
 ];
 
-const depoimentos = [
+const depoimentos: { nome: string; texto: string; avatar?: string }[] = [
   {
     nome: "Sarah",
+    avatar: "img/avatar_sarah.png",
     texto:
       "O que mais mudou foi a autorresponsabilidade e a autonomia — parar com a dependência emocional, com a carência. Eu me sentia muito presa, aprisionada, naquele 'conforto desconfortável', e não conseguia enxergar. Depois consegui me libertar disso e isso mudou vários aspectos: vida amorosa, profissional.",
   },
   {
     nome: "Anna Rachel",
+    avatar: "img/avatar_anna_rachel.jpg",
     texto:
       "Esse trabalho me libertou de uma relação de 15 anos tóxica e mal resolvida. Isso mudou tudo, amorosamente falando, na minha vida.",
   },
   {
     nome: "Maura",
+    avatar: "img/avatar_maura.jpg",
     texto:
       "Eu era uma pessoa atormentada, uma pessoa triste, que tinha medo de tudo, muito contida. E o trabalho foi me libertando. Hoje eu me sinto muito leve.",
   },
@@ -66,7 +69,15 @@ export default function Prova() {
               "{d.texto}"
             </p>
             <div className="flex items-center gap-3">
-              <AvatarPlaceholder name={d.nome} />
+              {d.avatar ? (
+                <img
+                  src={d.avatar}
+                  alt={d.nome}
+                  className="flex-none w-[46px] h-[46px] rounded-full object-cover border border-[color:var(--border)]"
+                />
+              ) : (
+                <AvatarPlaceholder name={d.nome} />
+              )}
               <span className="text-[14px] text-accent-strong font-semibold not-italic">
                 {d.nome}
                 <span className="block text-[12px] text-muted-token font-normal">

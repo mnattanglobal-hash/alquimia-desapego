@@ -7,8 +7,8 @@ export default function Historia() {
         Eu já fui essa mulher.
       </h2>
       <img
-        src="img/casal_2.jpg"
-        alt="Durga e o companheiro, hoje"
+        src="img/durga_solo.jpg"
+        alt="Durga, hoje"
         className="block w-full h-auto rounded-md border border-bronze shadow-card mt-2 mb-7"
       />
       <p className="mb-[18px]">
