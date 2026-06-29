@@ -1,5 +1,4 @@
 import Section from "../ui/Section";
-import DurgaPhoto from "../ui/DurgaPhoto";
 
 export default function Historia() {
   return (
@@ -7,10 +6,10 @@ export default function Historia() {
       <h2 className="text-[clamp(28px,6vw,40px)] text-center mb-[22px]">
         Eu já fui essa mulher.
       </h2>
-      <DurgaPhoto
-        tall
-        className="mt-2 mb-7"
-        description="Durga em luz quente, sentada, expressão de quem viveu o que está falando — não sorriso de divulgação."
+      <img
+        src="img/casal_2.jpg"
+        alt="Durga e o companheiro, hoje"
+        className="block w-full h-auto rounded-md border border-bronze shadow-card mt-2 mb-7"
       />
       <p className="mb-[18px]">
         Eu já fui uma mulher que ama demais, e eu não desejo isso pra ninguém.
