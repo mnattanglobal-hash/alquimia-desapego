@@ -179,3 +179,16 @@
     color: var(--accent);
   }
 }
+
+/* Legendas (WebVTT) — maiores e legíveis, principalmente no mobile */
+::cue {
+  font-size: 1.15em;
+  line-height: 1.4;
+  background-color: rgba(15, 11, 8, 0.72);
+  color: #f5efe2;
+}
+@media (max-width: 640px) {
+  ::cue {
+    font-size: 1.8em;
+  }
+}

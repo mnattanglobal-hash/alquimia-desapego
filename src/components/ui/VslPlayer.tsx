@@ -7,11 +7,6 @@ const captionsUrl = VIDEO_URL.replace(/\.(mp4|webm|ogg)(\?.*)?$/i, ".vtt");
 
 type VslPlayerProps = { label?: string };
 
-/**
- * Player da VSL no topo da página (16:9 responsivo).
- * Vídeo .mp4 -> autoplay MUTADO + legenda (WebVTT, sempre visível) + botão de som.
- * Embed (YouTube/Vimeo) -> iframe. Sem VIDEO_URL -> placeholder marcado.
- */
 export default function VslPlayer({
   label = "VSL da Durga (inserir vídeo)",
 }: VslPlayerProps) {
@@ -22,9 +17,7 @@ export default function VslPlayer({
     const v = videoRef.current;
     if (!v) return;
     const showCaptions = () => {
-      for (let i = 0; i < v.textTracks.length; i++) {
-        v.textTracks[i].mode = "showing";
-      }
+      for (let i = 0; i < v.textTracks.length; i++) v.textTracks[i].mode = "showing";
     };
     showCaptions();
     v.addEventListener("loadedmetadata", showCaptions);
@@ -39,19 +32,27 @@ export default function VslPlayer({
     if (!v.muted) v.play().catch(() => {});
     setMuted(v.muted);
   }
+  function togglePlay() {
+    const v = videoRef.current;
+    if (!v) return;
+    if (v.paused) v.play().catch(() => {});
+    else v.pause();
+  }
 
   if (hasVideo && isFile) {
     return (
       <div className="relative w-full aspect-video rounded-md overflow-hidden photo bg-black">
         <video
           ref={videoRef}
-          className="absolute inset-0 h-full w-full object-contain bg-black"
+          className="absolute inset-0 h-full w-full object-contain bg-black cursor-pointer"
           src={VIDEO_URL}
           autoPlay
           muted
           playsInline
-          controls
           preload="auto"
+          onClick={togglePlay}
+          controlsList="nodownload nofullscreen noremoteplayback"
+          disablePictureInPicture
         >
           <track kind="captions" srcLang="pt" label="Português" default src={captionsUrl} />
         </video>
