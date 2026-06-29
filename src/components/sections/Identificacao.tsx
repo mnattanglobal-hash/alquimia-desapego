@@ -5,7 +5,7 @@ export default function Identificacao() {
   return (
     <Section band narrow>
       <h2 className="text-[clamp(28px,6vw,40px)] mb-[22px]">
-        Você sabe que acabou. Mas ela não sai da sua cabeça.
+        Você sabe que acabou. Mas a pessoa não sai da sua cabeça.
       </h2>
       <p className="mb-[18px]">
         Você sabe que acabou. Todo mundo já te disse. Você mesma já disse.

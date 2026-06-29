@@ -21,7 +21,8 @@ export default function CtaFinal() {
           Você pode esperar o tempo curar. Ou fazer 15 minutos hoje.
         </h2>
         <p className="mb-[18px]">
-          Você pode continuar conferindo o celular pra ver se ela mandou mensagem.
+          Você pode continuar conferindo o celular pra ver se a pessoa mandou
+          mensagem.
           Continuar relendo conversa antiga. Continuar esperando o tempo curar
           sozinho — e o tempo é lento, você já sabe.
         </p>
