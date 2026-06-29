@@ -47,11 +47,10 @@ export default function Historia() {
         meu melhor amigo.
       </p>
 
-      <DurgaPhoto
-        tall
-        label="FOTO DO CASAL — Durga e Anki (inserir)"
-        className="my-7"
-        description="O casal hoje, doze anos juntos. Cumplicidade e leveza. A prova de que dá pra amar de novo, inteira."
+      <img
+        src="img/casal_durga_anki.jpg"
+        alt="Durga e o companheiro, hoje — dá pra amar de novo, inteira"
+        className="block w-full h-auto rounded-md border border-[color:var(--border)] shadow-[var(--card-shadow)] my-7"
       />
 
       <p className="mb-[18px]">
