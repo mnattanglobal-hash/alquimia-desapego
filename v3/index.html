@@ -34,13 +34,13 @@ fbq("track", "ViewContent", {content_name:"Desapego de Uma Vez", content_type:"p
 <style>
 :root{
   --rosa:#FAEDE9; --rosa-fundo:#F6E2DC; --branco:#FFFFFF; --escuro:#3B1620;
-  --rosa-forte:#C2536E; --rosa-forte2:#A8415A; --gold:#B08030;
+  --rosa-forte:#C2536E; --rosa-forte2:#A8415A; --gold:#B08030; --vinho-titulo:#6B2237;
   --verde:#049A6A; --verde2:#03835A;
   --ink:#2A1A1E; --apoio:#8A7076; --apoio-esc:#D9C3C7; --linha:rgba(59,22,32,.12);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--rosa);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--rosa);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 .b{padding:52px 0;isolation:isolate}
@@ -56,7 +56,7 @@ h1{font-size:clamp(28px,7vw,44px);font-weight:800;letter-spacing:-.01em}
 h2{font-size:clamp(23px,5.6vw,34px);font-weight:700;margin-bottom:14px}
 h3{font-size:19px;font-weight:700;margin-bottom:4px}
 p{margin-bottom:14px}
-.lead{font-size:clamp(17px,4.4vw,19px)}
+.lead{font-size:clamp(17.5px,4.7vw,20.5px)}
 strong{font-weight:700}
 
 /* botão */
@@ -95,12 +95,12 @@ strong{font-weight:700}
 .hero{padding:20px 0 44px;text-align:center}
 .hero h1{font-size:clamp(30px,8vw,52px);line-height:1.18}
 .hero .chips{margin:10px auto 10px}
-@media (max-width:480px){.hero .lead{font-size:15.5px;line-height:1.5}.hero{padding-top:12px;padding-bottom:34px}.logo img{height:26px;margin-bottom:12px}.hero h1{font-size:clamp(27px,7.2vw,34px);max-width:17ch}.hero-img{margin:14px auto 14px;max-width:320px}.hero-img img{max-height:300px;object-fit:cover;object-position:center 42%}.hero .chips{margin:12px auto 8px}.hero .preco{margin:6px 0 8px}.hero .preco b{font-size:42px}}
-.hero-img{--h:300px;margin:18px auto 18px;max-width:420px}
-.hero-img img{width:100%;border-radius:22px;box-shadow:0 18px 40px rgba(59,22,32,.22)}
-@media (min-width:700px){.hero-img{max-width:460px}}
+@media (max-width:480px){.hero .lead{font-size:18.5px;line-height:1.5}.hero{padding-top:12px;padding-bottom:30px}.logo img{height:26px;margin-bottom:10px}.hero h1{font-size:clamp(28px,7.4vw,36px);max-width:17ch}.hero-img{margin:14px auto 12px;max-width:100%}.hero .chips{margin:10px auto 6px}.hero .preco{margin:4px 0 8px}.hero .preco b{font-size:42px}}
+.hero-img{--h:220px;margin:16px auto 14px;max-width:100%}
+.hero-img img{width:100%;border-radius:18px;box-shadow:0 14px 34px rgba(59,22,32,.20)}
+@media (min-width:700px){.hero-img{max-width:560px}}
 /* frase de impacto: a ruminacao, no registro dela */
-.hero h1{font-family:Quicksand,Nunito,sans-serif;font-weight:700;color:var(--ink);max-width:16ch;margin:0 auto}
+.hero h1{font-family:Quicksand,Nunito,sans-serif;font-weight:700;color:var(--vinho-titulo);max-width:16ch;margin:0 auto}
 .hero h1 .aspas{color:var(--rosa-forte)}
 @media (min-width:700px){.hero h1{max-width:20ch}}
 .hero .preco{margin:8px 0 10px}
@@ -111,7 +111,7 @@ strong{font-weight:700}
 /* depoimentos */
 .dep{background:#fff;border:1px solid var(--linha);border-radius:18px;padding:18px;margin:14px 0;display:flex;gap:14px;align-items:flex-start}
 .dep img{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
-.dep em{font-style:normal;display:block;margin-bottom:8px;font-size:16px;line-height:1.5}
+.dep em{font-style:normal;display:block;margin-bottom:8px;font-size:17px;line-height:1.55}
 .dep b{font-size:14px;display:block}
 .dep small{font-size:12.5px;color:var(--apoio)}
 .branco .dep{background:var(--rosa);border-color:transparent}
@@ -132,26 +132,26 @@ strong{font-weight:700}
 @media (min-width:600px){.cards{grid-template-columns:1fr 1fr}}
 .card{background:var(--rosa);border-radius:18px;padding:20px}
 .card h3{font-size:18px}
-.card p{margin:0;color:#333;font-size:15.5px}
+.card p{margin:0;color:#3A2A2E;font-size:16.5px}
 
 /* entregáveis */
 .item{display:grid;gap:14px;grid-template-columns:1fr;align-items:center;padding:22px 0;border-bottom:1px solid var(--linha)}
 .item:last-child{border-bottom:0}
 @media (min-width:600px){.item{grid-template-columns:180px 1fr;gap:22px}.item .ph{margin:0}}
 .item .ph{max-width:220px;margin:0 auto;--h:180px}
-.item p{margin:0;font-size:15.5px;color:#333}
+.item p{margin:0;font-size:16.5px;color:#3A2A2E}
 .item h3 small{font-weight:500;color:var(--apoio);font-size:14px}
 .tag{display:inline-block;background:var(--rosa-forte);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:8px}
 
 /* para quem é */
 .lista{list-style:none;max-width:600px;margin:18px auto 22px}
-.lista li{position:relative;padding:11px 0 11px 34px;border-bottom:1px solid rgba(255,255,255,.12);font-size:16.5px}
+.lista li{position:relative;padding:11px 0 11px 34px;border-bottom:1px solid rgba(255,255,255,.12);font-size:17.5px}
 .lista li:last-child{border-bottom:0}
 .lista li::before{content:"";position:absolute;left:4px;top:18px;width:15px;height:15px;border-radius:50%;background:var(--rosa-forte)}
 
 /* recapitulando */
 .recap{max-width:600px;margin:0 auto;border:1px solid var(--linha);border-radius:18px;overflow:hidden;background:#fff}
-.recap div{display:flex;justify-content:space-between;gap:14px;padding:13px 16px;border-bottom:1px solid var(--linha);font-size:15.5px}
+.recap div{display:flex;justify-content:space-between;gap:14px;padding:13px 16px;border-bottom:1px solid var(--linha);font-size:16.5px}
 .recap div span:last-child{white-space:nowrap;font-weight:600;color:var(--apoio)}
 .recap div:last-child{border-bottom:0;background:var(--rosa);font-weight:700}
 .recap div:last-child span:last-child{color:var(--ink);font-size:22px}
@@ -167,7 +167,7 @@ strong{font-weight:700}
 .acesso{list-style:none;max-width:600px;margin:18px auto 0;display:grid;gap:12px}
 .acesso li{background:#fff;border-radius:18px;padding:16px 16px 16px 60px;position:relative}
 .acesso li::before{content:attr(data-n);position:absolute;left:14px;top:14px;width:32px;height:32px;border-radius:50%;background:var(--rosa-forte);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
-.acesso p{margin:0;font-size:15.5px;color:#333}
+.acesso p{margin:0;font-size:16.5px;color:#3A2A2E}
 
 /* autoridade */
 .autora{display:flex;gap:22px;align-items:flex-start;max-width:640px;margin:0 auto}
@@ -186,11 +186,11 @@ strong{font-weight:700}
 
 /* FAQ */
 details{border-bottom:1px solid var(--linha);padding:2px 0}
-details summary{cursor:pointer;font-weight:600;padding:14px 32px 14px 0;list-style:none;position:relative;font-size:16.5px}
+details summary{cursor:pointer;font-weight:600;padding:14px 32px 14px 0;list-style:none;position:relative;font-size:17.5px}
 details summary::-webkit-details-marker{display:none}
 details summary::after{content:"+";position:absolute;right:2px;top:12px;color:var(--rosa-forte);font-size:24px;font-weight:700;line-height:1}
 details[open] summary::after{content:"\2013"}
-details p{color:#333;padding-bottom:14px;font-size:15.5px}
+details p{color:#3A2A2E;padding-bottom:14px;font-size:16.5px}
 
 /* rodapé */
 footer{padding:32px 0 96px;text-align:center;font-size:12.5px;color:var(--apoio-esc)}
@@ -223,8 +223,8 @@ footer a{color:var(--apoio-esc)}
     <h1><span class="aspas">&ldquo;</span>Ele já seguiu a vida. E eu aqui.<span class="aspas">&rdquo;</span></h1>
     -->
 
-    <figure class="ph hero-img foto" data-label="IMAGEM DE AUTO-RECONHECIMENTO (ver BRIEF_IMAGENS_v3.md)">
-      <img src="img/hero-reconhecimento.jpg" alt="Mulher deitada na cama de madrugada, relendo a conversa no celular">
+    <figure class="ph hero-img foto" data-label="IMAGEM DE ALTA CONVERSÃO · antes e depois">
+      <img src="img/hero-antes-depois.jpg" alt="À esquerda, você hoje: de madrugada, acordada com o celular na mão. À direita, você em 7 dias: dormindo, com o celular longe da cama.">
     </figure>
 
     <p class="lead">Se é isso que passa na sua cabeça, o <strong>Desapego de Uma Vez</strong> é uma prática guiada de 13 minutos por dia, por 7 dias. Você dá play, fecha os olhos e é conduzida até o fim.</p>
