@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ykg64oqhg1");</script>
+<script>window.clarity&&clarity("set","tracking_rev","2026-09-21_ic_no_checkout");</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desapego de Uma Vez | Prática guiada de menos de 15 minutos por dia</title>
@@ -663,13 +665,15 @@ footer a{color:var(--apoio-esc)}
     }, { threshold: 0 }).observe(hero);
   }
 
-  /* eventos de checkout nos CTAs (o checkout externo não dispara InitiateCheckout) */
+  /* eventos de checkout nos CTAs.
+     2026-09-21: o InitiateCheckout do Meta saiu daqui. Medido ao vivo no checkout do
+     TheMembers: ele JÁ dispara IC no load, com value=87, currency=BRL e content_ids da
+     oferta. Manter os dois duplicava o evento. GA4 e Clarity seguem marcando o clique,
+     que é o que o checkout não cobre. */
   document.querySelectorAll("a.cta").forEach(function (a) {
     a.addEventListener("click", function () {
-      var p = { value: 87, currency: "BRL", content_type: "product", content_name: "Desapego de Uma Vez" };
-      if (PRODUCT_ID.indexOf("{{") === -1) p.content_ids = [PRODUCT_ID];
-      if (window.fbq) fbq("track", "InitiateCheckout", p);
       if (window.gtag) gtag("event", "begin_checkout", { value: 87, currency: "BRL" });
+      if (window.clarity) clarity("event", "cta_checkout");
     });
   });
 })();
