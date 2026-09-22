@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","ykg64oqhg1");</script>
-<script>window.clarity&&clarity("set","tracking_rev","2026-09-21_hotmart_bloco1");</script>
+<script>window.clarity&&clarity("set","tracking_rev","2026-09-22_ic_so_na_hotmart");</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desapego de Uma Vez | Prática guiada de menos de 15 minutos por dia</title>
@@ -538,14 +538,18 @@ footer a{color:var(--apoio-esc)}
   /* eventos de checkout nos CTAs.
      2026-09-21 (manhã): o InitiateCheckout saiu daqui porque o checkout do TheMembers
      já disparava IC no load — manter os dois duplicava o evento.
-     2026-09-21 (noite): o checkout passou a ser o da Hotmart, que NÃO dispara IC
-     (verificado ao vivo: só PageView; a Hotmart só oferece Vendas realizadas / Visitas
-     na página de pagamento / Visitas na página de produto). Sem reintroduzir aqui, a
-     conta fica sem nenhum sinal de IC — e há campanha otimizando por esse evento.
-     Não duplica: o lado da Hotmart não emite IC. */
+     2026-09-21 (noite): reintroduzido aqui na premissa de que a Hotmart não emitia IC.
+     A PREMISSA ESTAVA ERRADA. A verificação tinha sido feita só na aba Network do
+     navegador, e a Hotmart não usa pixel no browser: ela manda pela API de Conversões
+     (servidor), que por definição não aparece no DevTools.
+     2026-09-22: teste ponta a ponta (LP → checkout → Pix gerado) provou que o checkout
+     da Hotmart não dispara NADA no navegador, e o Gerenciador de Eventos mostra o IC
+     com "+33,3% de conversões adicionais da API de Conversões (servidor)" — é a Hotmart.
+     Com o IC daqui, contava 2 por pessoa. Removido: o IC agora vem só da Hotmart,
+     no load da página de pagamento, que é o sinal mais limpo (chegou de verdade).
+     ⚠️ A Hotmart NÃO emite AddPaymentInfo — esse evento não existe mais neste funil. */
   document.querySelectorAll("a.cta").forEach(function (a) {
     a.addEventListener("click", function () {
-      if (window.fbq) fbq("track", "InitiateCheckout", { value: 87, currency: "BRL", content_type: "product", content_name: "Desapego de Uma Vez" });
       if (window.gtag) gtag("event", "begin_checkout", { value: 87, currency: "BRL" });
       if (window.clarity) clarity("event", "cta_checkout");
     });
