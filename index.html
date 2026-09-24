@@ -225,8 +225,10 @@ footer a{color:var(--apoio-esc)}
 @media (max-width:480px){.paineis{gap:7px}.paineis figcaption{font-size:12.5px}}
 
 
-/* telas pequenas/baixas: comprime o hero pra primeira dobra continuar vendendo sozinha */
-@media (max-width:380px),(max-height:800px){
+/* celulares pequenos/baixos: comprime o hero pra primeira dobra continuar vendendo sozinha.
+   24/09/2026 - o ramo de altura ganhou guard de largura pelo mesmo motivo acima: (max-height:800px)
+   sozinho pegava a maioria dos notebooks e encolhia a tipografia no desktop. */
+@media (max-width:380px),(max-width:700px) and (max-height:800px){
   .hero h1{font-size:26px;line-height:1.16}
   .hero .lead{font-size:16.5px;line-height:1.45}
   .hero-img{margin:10px auto 9px}
@@ -242,9 +244,14 @@ footer a{color:var(--apoio-esc)}
 }
 
 
-/* telas muito baixas (<=640px de altura): a imagem sai pra oferta e botao caberem na dobra.
-   Regra do metodo: o bloco 1 tem que vender sozinho; a imagem e o item sacrificavel. */
-@media (max-height:640px){
+/* celulares muito baixos (<=640px de altura E <=700px de largura): a imagem sai pra oferta e
+   botao caberem na dobra. Regra do metodo: o bloco 1 tem que vender sozinho; a imagem e o item
+   sacrificavel.
+   24/09/2026 - acrescentado o guard de LARGURA (max-width:700px). Antes a regra era so de altura
+   e disparava em NOTEBOOK: num 1366x768 a viewport util fica em ~600-640px, entao a imagem
+   antes/depois sumia da primeira dobra no desktop de quem tem tela baixa (ou zoom >100%).
+   Foi o bug relatado pela equipe: "no computador dela a imagem nao aparece". */
+@media (max-width:700px) and (max-height:640px){
   .hero .hero-img{display:none}
   .hero h1{font-size:24px}
   .hero .lead{font-size:15.5px}
