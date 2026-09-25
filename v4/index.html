@@ -167,10 +167,11 @@ p{margin-bottom:14px}
 .pqs{display:grid;gap:26px;grid-template-columns:1fr;align-items:start;max-width:960px;margin:24px auto 0}
 @media (min-width:820px){.pqs{grid-template-columns:340px 1fr}}
 .pqs figure img{border-radius:16px;width:100%}
-.lista{list-style:none}
-.lista li{position:relative;padding:11px 0 11px 32px;border-bottom:1px solid rgba(255,255,255,.14);font-size:17px}
-.lista li:last-child{border-bottom:0}
-.lista li::before{content:"";position:absolute;left:2px;top:19px;width:13px;height:13px;border-radius:50%;background:var(--laranja)}
+/* cada frase numa caixinha, pra destacar no bloco (pedido da Aline, áudio de 25/09 16:08;
+   referência: o "é para você que..." do ciclodetox21dias) */
+.lista{list-style:none;display:grid;gap:12px}
+.lista li{background:#F3DED6;border-radius:14px;padding:17px 20px;font-size:16.5px;line-height:1.5;color:#3A2A2E}
+.lista li strong{font-weight:800;color:var(--vinho-prof)}
 .pqs-fecho{max-width:700px;margin:26px auto 0;text-align:center;font-size:clamp(17.5px,4.6vw,20px);font-weight:600}
 
 /* ---------- BLOCO 8 · RECAPITULANDO ---------- */
@@ -304,9 +305,8 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
     <h2 class="center">Veja como elas conseguiram seguir em frente com o Desapego de Uma Vez.</h2>
 
     <div class="deps">
-      <!-- ⚠️ FOTO PLACEHOLDER: dep-marilia.jpg foi gerada por IA a partir da foto da Maura
-           (a Marilia e irma dela), so pra ocupar o lugar. SUBSTITUIR pela foto real
-           antes de escalar tráfego. Depoimento recebido por WhatsApp em 25/09/2026. -->
+      <!-- Depoimento recebido por WhatsApp em 25/09/2026. Foto real enviada pela Aline
+           no Telegram em 25/09 16:12 (substituiu a placeholder). -->
       <article class="dep">
         <span class="destaque">“Ficou bem mais leve”</span>
         <em>“Fiz o processo todo. Não foi difícil. Foi até um alívio ter encontrado ressonância para a necessidade de me libertar do que vivi. Atualmente, sinto que estou mais comigo e voltada para o futuro. Sinto que é assim agora e pronto. Ainda lembro-me dele, claro. Mas ficou bem mais leve.”</em>
@@ -492,15 +492,15 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
 
     <div class="pqs">
       <figure><img src="img/praquemserve-fone.jpg" alt="Mulher recostada de olhos fechados, com fone de ouvido, ouvindo a Prática Alquímica de Desapego no celular."></figure>
-      <ul class="lista" style="color:var(--ink)">
-        <li>Fica imaginando se ele sente sua falta, se pensa em você ou se algum dia vai voltar.</li>
-        <li>Tem medo de seguir em frente e, justamente quando conseguir, ele aparecer de novo.</li>
-        <li>Sente que está cansada de sofrer, mas seu coração não sabe esquecer.</li>
-        <li>Ainda olha o celular esperando, no fundo, uma mensagem que você sabe que talvez nunca chegue.</li>
-        <li>Fica pensando: “E se eu tivesse feito diferente? Será que a gente ainda estaria junto?”</li>
-        <li>Ainda sonha com ele e acorda com aquela sensação de que voltou para o passado.</li>
-        <li>Fica esperando algum sinal nas redes sociais para saber se ele ainda pensa em você.</li>
-        <li>Fica imaginando ele voltando atrás e fazendo tudo diferente, mas não é essa a realidade.</li>
+      <ul class="lista">
+        <li>Fica imaginando se ele sente sua falta, se pensa em você ou <strong>se algum dia vai voltar</strong>.</li>
+        <li><strong>Tem medo de seguir em frente</strong> e, justamente quando conseguir, ele aparecer de novo.</li>
+        <li>Sente que está cansada de sofrer, mas <strong>seu coração não sabe esquecer</strong>.</li>
+        <li><strong>Ainda olha o celular esperando</strong>, no fundo, uma mensagem que você sabe que talvez nunca chegue.</li>
+        <li>Fica pensando: <strong>“E se eu tivesse feito diferente? Será que a gente ainda estaria junto?”</strong></li>
+        <li><strong>Ainda sonha com ele</strong> e acorda com aquela sensação de que voltou para o passado.</li>
+        <li>Fica <strong>esperando algum sinal nas redes sociais</strong> para saber se ele ainda pensa em você.</li>
+        <li>Fica imaginando ele <strong>voltando atrás e fazendo tudo diferente</strong>, mas não é essa a realidade.</li>
       </ul>
     </div>
 
