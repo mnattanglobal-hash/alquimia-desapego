@@ -115,8 +115,6 @@ p{margin-bottom:14px}
 .hero-img{margin:16px auto 14px;max-width:100%}
 .hero-img img{width:100%}
 @media (min-width:700px){.hero-img{max-width:460px}}
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:12px auto 20px}
-.chips span{font-size:13px;font-weight:600;background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.24);border-radius:999px;padding:6px 12px}
 .hero .seta span{background:var(--laranja)}
 
 /* ---------- BLOCO 2 · DEPOIMENTOS ---------- */
@@ -259,7 +257,6 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
   .hero .logo img{height:52px;margin-bottom:10px}
   .hero h1{font-size:25px}
   .hero-img{margin:10px auto 8px}
-  .chips{margin:8px auto 12px}
 }
 </style>
 </head>
@@ -272,7 +269,10 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
      2. logo com letra e desenho em branco, mantendo a parte laranja
      3. frase aprovada, branca, destaques em #00ffa3
      4. imagem antes/depois com fundo transparente
-     25/09: CTA da primeira dobra REMOVIDO por decisão do Mathêus — as páginas de referência
+     25/09: CTA e os 3 chips ("13 min por dia / 7 dias / Acesso na hora") REMOVIDOS da primeira
+     dobra por decisão do Mathêus — os chips pareciam botão sem ser (achado do CRO: 32% dos
+     toques da página caíam em coisas que não respondem). A dobra fica logo + headline + imagem.
+     Sobre o CTA: decisão do Mathêus — as páginas de referência
      do método não têm botão no topo ("sem botão, sem nada", reunião 24/09). Com a barra fixa
      também fora, o primeiro CTA da página passa a ser o do bloco 9 (Oferta).
      ============================================================ -->
@@ -285,8 +285,6 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
     <figure class="hero-img">
       <img src="img/hero-antes-depois.webp" alt="À esquerda, antes do Desapego de Uma Vez: mulher cabisbaixa, apoiando o rosto na mão. À direita, com o Desapego de Uma Vez: a mesma mulher de olhos fechados, leve e sorrindo.">
     </figure>
-
-    <div class="chips"><span>13 min por dia</span><span>7 dias</span><span>Acesso na hora</span></div>
   </div>
   <div class="seta" aria-hidden="true"><span><svg viewBox="0 0 448 512"><path d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"/></svg></span></div>
 </section>
@@ -304,6 +302,18 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
     <h2 class="center">Veja como elas conseguiram seguir em frente com o Desapego de Uma Vez.</h2>
 
     <div class="deps">
+      <!-- ⚠️ FOTO PLACEHOLDER: dep-marilia.jpg foi gerada por IA a partir da foto da Maura
+           (a Marilia e irma dela), so pra ocupar o lugar. SUBSTITUIR pela foto real
+           antes de escalar tráfego. Depoimento recebido por WhatsApp em 25/09/2026. -->
+      <article class="dep">
+        <span class="destaque">“Ficou bem mais leve”</span>
+        <em>“Fiz o processo todo. Não foi difícil. Foi até um alívio ter encontrado ressonância para a necessidade de me libertar do que vivi. Atualmente, sinto que estou mais comigo e voltada para o futuro. Sinto que é assim agora e pronto. Ainda lembro-me dele, claro. Mas ficou bem mais leve.”</em>
+        <div class="quem">
+          <img src="img/dep-marilia.jpg" alt="">
+          <div><b>Marilia Horta</b><small>cliente do Desapego de Uma Vez</small></div>
+        </div>
+      </article>
+
       <article class="dep">
         <span class="destaque">“Me ajudou MUITO a conseguir soltar memórias ruins”</span>
         <em>“O Desapego de Uma Vez foi necessário pra mim! Me ajudou MUITO a conseguir soltar memórias ruins de relacionamentos passados para eu viver novos padrões afetivos. A meditação é maravilhosa, é muito fácil entender como faz, é só fechar os olhos e se abrir para o processo guiado. Recomendo mil vezes. Muito obrigada!!!”</em>
@@ -322,14 +332,6 @@ footer .disclaimer{font-size:11.5px;opacity:.78;line-height:1.55}
         </div>
       </article>
 
-      <article class="dep">
-        <span class="destaque">“Hoje eu me sinto muito leve”</span>
-        <em>“Eu era uma pessoa atormentada, uma pessoa triste, que tinha medo de tudo, muito contida. E o trabalho foi me libertando. Hoje eu me sinto muito leve.”</em>
-        <div class="quem">
-          <img src="img/dep-maura.jpg" alt="">
-          <div><b>Maura</b><small>cliente do Desapego de Uma Vez</small></div>
-        </div>
-      </article>
     </div>
   </div>
   <div class="seta" aria-hidden="true"><span><svg viewBox="0 0 448 512"><path d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"/></svg></span></div>
