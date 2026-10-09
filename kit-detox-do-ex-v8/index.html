@@ -122,6 +122,7 @@ p{margin:0 0 14px}
 .nota i{width:11px;height:11px;border-radius:3px;background:#EEE}
 .sc.sem .nota i.on{background:var(--vermelho)}
 .sc.com .nota i.on{background:var(--verde)}
+.sc.com .nota i{background:#E6F7EE}
 .sc-note{font-size:12px;color:var(--apoio);text-align:center;margin-top:12px;line-height:1.45}
 
 /* ---- mecanismo (13 minutos) ---- */
@@ -212,7 +213,26 @@ footer a{color:#fff}
 footer p{margin:0 0 8px}
 .logo-sep{display:flex;justify-content:center;padding:6px 0 0}
 .logo-sep img{width:120px;opacity:.9}
-@media (min-width:600px){h1{font-size:34px}h2{font-size:28px}.slide{flex-basis:46%}}
+/* ---- vídeo antes/depois quadrado ---- */
+.ad video{width:100%;aspect-ratio:1/1;display:block;border-radius:var(--raio);background:#000}
+/* ---- espelho em carrossel ---- */
+.esp{flex:0 0 80%;scroll-snap-align:center;background:var(--branco);border-radius:var(--raio);padding:18px 16px 20px;box-shadow:var(--sombra);min-height:150px;display:flex;flex-direction:column;gap:12px}
+.esp .ic{width:46px;height:46px;border-radius:14px;background:linear-gradient(145deg,#FFB3D1,var(--rosa-forte));display:flex;align-items:center;justify-content:center}
+.esp .ic svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.esp p{margin:0;font-size:15.5px;color:var(--vinho);line-height:1.45}
+.esp.destaque{border:2px solid var(--coral)}
+.esp.destaque .ic{background:linear-gradient(145deg,var(--coral),var(--rosa-forte))}
+/* ---- depoimentos em carrossel ---- */
+.dep-slide{flex:0 0 88%;scroll-snap-align:center}
+.dep-slide .wa{height:100%}
+/* ---- bio em tópicos ---- */
+.cred{list-style:none;display:grid;gap:10px;margin:6px 0 4px}
+.cred li{background:rgba(255,255,255,.16);border-radius:14px;padding:12px 14px 12px 44px;position:relative;font-size:14.5px;line-height:1.4}
+.cred li::before{content:"";position:absolute;left:14px;top:14px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 5px var(--coral)}
+/* ---- mockup do preço ---- */
+.mock{margin:4px auto 14px;max-width:420px}
+.mock img{mix-blend-mode:multiply}
+@media (min-width:600px){h1{font-size:34px}h2{font-size:28px}.slide{flex-basis:46%}.esp{flex-basis:46%}.dep-slide{flex-basis:70%}}
 </style>
 </head>
 <body>
@@ -228,32 +248,34 @@ footer p{margin:0 0 8px}
     <p class="sub" id="sub">O Kit Detox do Ex é uma prática guiada de 13 minutos por dia, durante 7 dias, para parar de alimentar o que ainda prende você a ele.</p>
     <div class="passos">
       <div class="passo"><b>01</b><span>Você deita, põe o fone e aperta o play.</span></div>
-      <div class="passo"><b>02</b><span>A voz da Durga conduz os 13 minutos. Não tem nada para anotar nem estudar.</span></div>
-      <div class="passo"><b>03</b><span>No sétimo dia você abre o Diário de Bordo e vê, escrito, o que mudou.</span></div>
+      <div class="passo"><b>02</b><span>Você deixa o Detox agir na sua mente e no seu coração.</span></div>
+      <div class="passo"><b>03</b><span>No sétimo dia, você olha para trás e percebe o quanto já seguiu em frente.</span></div>
     </div>
-    <figure class="ad" style="box-shadow:none;background:transparent"><img src="img/antes-depois.webp" alt="A mesma mulher no mesmo quarto: à noite rolando o perfil dele no celular, e numa manhã depois dos 7 dias" width="1176" height="766"></figure>
+    <figure class="ad"><video autoplay muted loop playsinline preload="metadata" poster="img/antes-depois-poster.jpg" aria-label="A mesma mulher no mesmo quarto: antes, à noite rolando o perfil dele no celular; depois dos 7 dias, numa manhã de sol"><source src="img/antes_depois.webm" type="video/webm"><source src="img/antes_depois.mp4" type="video/mp4"></video></figure>
     <div class="cta-wrap"><a class="cta" href="#oferta" data-cta="hero_ancora">Quero começar meus 7 dias</a></div>
-    <p class="cta-sub">12x de R$8,99 ou R$87 à vista &nbsp;·&nbsp; 7 dias de garantia</p>
   </div>
 </section>
 
 <!-- ===== ESPELHO ===== -->
 <section class="sec-rosa" id="espelho">
   <div class="w">
-    <h2>Se você se reconhece em pelo menos duas destas situações, o Kit foi feito para você</h2>
-    <ul class="lista" id="lista">
-      <li data-k="vigilancia">Promete que é a última vez que olha o perfil dele, e quando vê já está lá de novo.</li>
-      <li data-k="cabeca">Trabalha, treina, sai com as amigas, e mesmo assim chega em casa e ele continua lá.</li>
-      <li data-k="culpa">Volta no “e se eu tivesse feito diferente”, e a cena recomeça do zero.</li>
-      <li data-k="trouxa">Se chama de trouxa por ainda sentir falta de quem te machucou.</li>
-      <li data-k="outra">Fica imaginando o dia em que ele vai aparecer com outra, fazendo por ela o que não fez por você.</li>
-      <li data-k="sozinha">Já evita tocar no assunto com as amigas, porque sabe que elas já ouviram isso vezes demais.</li>
-      <li data-k="vazio">Sente um vazio no peito que não passa com trabalho, academia nem distração.</li>
-      <li data-k="migalhas">Já aceitou migalha achando que era o que dava pra ter.</li>
-      <li data-k="tempo">Já faz meses e, em alguns dias, ainda parece o primeiro dia.</li>
-      <li data-k="quase">Nem chegou a ser namoro de verdade, e mesmo assim não consegue soltar.</li>
-    </ul>
-    <p class="mut c" style="margin-top:14px">Essas frases vieram de mulheres reais falando do próprio término, em fóruns e comentários públicos. Nenhuma é inventada.</p>
+    <h2>Se você se reconhece em duas destas cenas, o Kit foi feito para você</h2>
+    <div class="carr">
+      <div class="track" id="lista" data-auto="3200">
+        <div class="esp" data-k="trouxa"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 15s1.5-2 4-2 4 2 4 2"/><path d="M9 9h.01M15 9h.01"/></svg></div><p>Se chama de trouxa por ainda sentir falta de quem te machucou.</p></div>
+        <div class="esp" data-k="vigilancia"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><p>Promete que é a última vez que olha o perfil dele. E já está lá de novo.</p></div>
+        <div class="esp" data-k="cabeca"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a7 7 0 0 1 7 7c0 3-2 4-2 6v2H9v-2c0-2-2-3-2-6a7 7 0 0 1 5-7z"/><path d="M10 21h4"/></svg></div><p>Trabalha, treina, sai. E chega em casa e ele continua lá.</p></div>
+        <div class="esp" data-k="culpa"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></div><p>Volta no “e se eu tivesse feito diferente”, e a cena recomeça do zero.</p></div>
+        <div class="esp" data-k="outra"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 2.5-5 6-5s6 2 6 5"/><path d="M14 19c.5-2 2-3 3.5-3s3 1 3.5 3"/></svg></div><p>Fica imaginando o dia em que ele vai aparecer com outra.</p></div>
+        <div class="esp" data-k="sozinha"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></div><p>Já evita tocar no assunto com as amigas. Elas já ouviram isso vezes demais.</p></div>
+        <div class="esp" data-k="vazio"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg></div><p>Um vazio no peito que não passa com trabalho nem distração.</p></div>
+        <div class="esp" data-k="migalhas"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="16" r="1.5"/><circle cx="12" cy="18" r="1.5"/><circle cx="18" cy="15" r="1.5"/><circle cx="10" cy="11" r="1.5"/><circle cx="15" cy="8" r="1.5"/></svg></div><p>Já aceitou migalha achando que era o que dava pra ter.</p></div>
+        <div class="esp" data-k="tempo"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><p>Já faz meses e, em alguns dias, ainda parece o primeiro dia.</p></div>
+        <div class="esp" data-k="quase"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h6M14 12h6"/><circle cx="12" cy="12" r="2"/></svg></div><p>Nem chegou a ser namoro de verdade. E mesmo assim não consegue soltar.</p></div>
+      </div>
+      <div class="setas"><button type="button" aria-label="Anterior" data-dir="-1">‹</button><button type="button" aria-label="Próximo" data-dir="1">›</button></div>
+    </div>
+    <p class="mut c" style="margin-top:10px">Frases de mulheres reais falando do próprio término, em fóruns e comentários públicos.</p>
   </div>
 </section>
 
@@ -276,15 +298,15 @@ footer p{margin:0 0 8px}
     <div class="sc com">
       <div class="cab">Com os 7 dias do Kit</div>
       <ul>
-        <li>Olhar o perfil dele antes de dormir<span class="nota"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
-        <li>Reler as conversas antigas<span class="nota"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
-        <li>A noite, quando a casa fica em silêncio<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
-        <li>Culpa pelo que podia ter feito diferente<span class="nota"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
-        <li>Vergonha de ainda sentir<span class="nota"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
-        <li>Vazio no peito<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></li>
+        <li>Dormir sem passar pelo perfil dele<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+        <li>Deixar as conversas antigas no passado<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+        <li>Noite tranquila, mesmo com a casa em silêncio<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></li>
+        <li>Paz com o que passou<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
+        <li>Orgulho de estar cuidando de você<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></li>
+        <li>Peito leve<span class="nota"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></li>
       </ul>
     </div>
-    <p class="sc-note">Escala ilustrativa do que a prática trabalha em cada ponto. Não é medição nem promessa de resultado: o ritmo é de cada mulher, e é para isso que existe o Diário de Bordo.</p>
+    <p class="sc-note">Escala ilustrativa do que a prática trabalha em cada ponto. O ritmo é de cada mulher, e é para isso que existe o Diário de Bordo.</p>
   </div>
 </section>
 
@@ -311,51 +333,56 @@ footer p{margin:0 0 8px}
 <section class="sec-branca" id="depoimentos">
   <div class="w">
     <h2>O que elas mandaram depois dos 7 dias</h2>
-    <div class="prints">
-      <div class="wa">
-        <div class="bar"><span>21:47</span><span>▂▄▆ ᯤ ▮</span></div>
-        <div class="hd"><img src="img/dep-regina.webp" alt="" width="38" height="38"><div><b>Regina</b><small>online</small></div></div>
-        <div class="msgs">
-          <div class="m">Fiz durante 7 dias a prática e refaço esporadicamente quando sinto necessidade…<span class="t">21:31</span></div>
-          <div class="m">na prática fortalece a auto estima e faz você sentir internamente uma força maior e não é sobre alguém fora e sim sobre você dentro<span class="t">21:32</span></div>
-          <div class="m">e se você tem essa força internamente nada pode te abalar 🤍<span class="t">21:32</span></div>
-        </div>
-        <div class="legenda">Regina Maruyama, cliente do Kit Detox do Ex. Depoimento enviado por escrito, reproduzido na íntegra.</div>
+    <div class="carr">
+      <div class="track" id="deps" data-auto="4200">
+        <div class="dep-slide"><div class="wa">
+          <div class="bar"><span>21:47</span><span>▂▄▆ ᯤ ▮</span></div>
+          <div class="hd"><img src="img/dep-regina.webp" alt="" width="38" height="38"><div><b>Regina</b><small>online</small></div></div>
+          <div class="msgs">
+            <div class="m">Fiz durante 7 dias a prática e refaço esporadicamente quando sinto necessidade…<span class="t">21:31</span></div>
+            <div class="m">na prática fortalece a auto estima e faz você sentir internamente uma força maior e não é sobre alguém fora e sim sobre você dentro<span class="t">21:32</span></div>
+            <div class="m">e se você tem essa força internamente nada pode te abalar 🤍<span class="t">21:32</span></div>
+          </div>
+          <div class="legenda">Regina Maruyama, cliente do Kit Detox do Ex. Depoimento enviado por escrito, reproduzido na íntegra.</div>
+        </div></div>
+        <div class="dep-slide"><div class="wa">
+          <div class="bar"><span>19:08</span><span>▂▄▆ ᯤ ▮</span></div>
+          <div class="hd"><img src="img/dep-aline.webp" alt="" width="38" height="38"><div><b>Aline</b><small>online</small></div></div>
+          <div class="msgs">
+            <div class="m">O Detox do Ex foi necessário pra mim! Me ajudou MUITO a conseguir soltar memórias ruins de relacionamentos passados para eu viver novos padrões afetivos.<span class="t">18:52</span></div>
+            <div class="m">A meditação é maravilhosa, é muito fácil entender como faz, é só fechar os olhos e se abrir para o processo guiado.<span class="t">18:53</span></div>
+            <div class="m">Recomendo mil vezes. Muito obrigada!!!<span class="t">18:53</span></div>
+          </div>
+          <div class="legenda">Aline Antunes, cliente do Kit Detox do Ex e integrante da equipe. Depoimento enviado por escrito, reproduzido na íntegra.</div>
+        </div></div>
+        <div class="dep-slide"><div class="wa">
+          <div class="bar"><span>22:15</span><span>▂▄▆ ᯤ ▮</span></div>
+          <div class="hd"><img src="img/dep-marilia.webp" alt="" width="38" height="38"><div><b>Marília</b><small>online</small></div></div>
+          <div class="msgs">
+            <div class="m">Fiz o processo todo. Não foi difícil. Foi até um alívio ter encontrado ressonância para a necessidade de me libertar do que vivi.<span class="t">22:03</span></div>
+            <div class="m">Atualmente, sinto que estou mais comigo e voltada para o futuro. Sinto que é assim agora e pronto.<span class="t">22:04</span></div>
+            <div class="m">Ainda lembro-me dele, claro. Mas ficou bem mais leve.<span class="t">22:04</span></div>
+          </div>
+          <div class="legenda">Marília Horta, cliente do Kit Detox do Ex. Depoimento enviado por escrito, reproduzido na íntegra.</div>
+        </div></div>
+        <div class="dep-slide"><div class="wa">
+          <div class="bar"><span>20:31</span><span>▂▄▆ ᯤ ▮</span></div>
+          <div class="hd"><img src="img/dep-anna.webp" alt="" width="38" height="38"><div><b>Raquel</b><small>online</small></div></div>
+          <div class="msgs">
+            <div class="m">Esse trabalho me libertou de uma relação de 15 anos tóxica e mal resolvida.<span class="t">20:26</span></div>
+            <div class="m">Isso mudou tudo, amorosamente falando, na minha vida.<span class="t">20:27</span></div>
+          </div>
+          <div class="legenda">Anna Rachel, aluna da Escola de Alquimia Ascensional. Depoimento enviado por escrito, reproduzido na íntegra.</div>
+        </div></div>
       </div>
-      <div class="wa">
-        <div class="bar"><span>19:08</span><span>▂▄▆ ᯤ ▮</span></div>
-        <div class="hd"><img src="img/dep-aline.webp" alt="" width="38" height="38"><div><b>Aline</b><small>online</small></div></div>
-        <div class="msgs">
-          <div class="m">O Detox do Ex foi necessário pra mim! Me ajudou MUITO a conseguir soltar memórias ruins de relacionamentos passados para eu viver novos padrões afetivos.<span class="t">18:52</span></div>
-          <div class="m">A meditação é maravilhosa, é muito fácil entender como faz, é só fechar os olhos e se abrir para o processo guiado.<span class="t">18:53</span></div>
-          <div class="m">Recomendo mil vezes. Muito obrigada!!!<span class="t">18:53</span></div>
-        </div>
-        <div class="legenda">Aline Antunes, cliente do Kit Detox do Ex e integrante da equipe. Depoimento enviado por escrito, reproduzido na íntegra.</div>
-      </div>
+      <div class="setas"><button type="button" aria-label="Anterior" data-dir="-1">‹</button><button type="button" aria-label="Próximo" data-dir="1">›</button></div>
     </div>
     <div class="cta-wrap"><a class="cta" href="#oferta" data-cta="depoimentos_ancora">Quero começar meus 7 dias</a></div>
   </div>
 </section>
 
-<!-- ===== CARROSSEL ===== -->
-<section class="sec-rosa" id="carrossel">
-  <div class="w">
-    <h2>Tudo chega no seu e-mail em poucos minutos</h2>
-    <div class="carr">
-      <div class="track" id="track">
-        <div class="slide"><img src="img/entregavel-3-pratica.webp" alt="Prática Guiada Detox do Ex"><p><b>Prática Guiada Detox do Ex</b><br>vídeo de 13 minutos, o mesmo todos os dias</p></div>
-        <div class="slide"><img src="img/entregavel-1-aula.webp" alt="Aula Como funciona o Apego"><p><b>Aula: Como funciona o Apego</b><br>vídeo de 7 minutos</p></div>
-        <div class="slide"><img src="img/entregavel-2-guia.webp" alt="Guia de Preparação"><p><b>Guia de Preparação para a Prática</b><br>vídeo de 7 minutos e 2 materiais para imprimir</p></div>
-        <div class="slide"><img src="img/bonus-17-afirmacoes.webp" alt="As 17 Afirmações do Desapego Emocional"><p><b>Bônus: As 17 Afirmações do Desapego Emocional</b><br>para ler todos os dias</p></div>
-        <div class="slide"><img src="img/tudao-mockups.webp" alt="Todos os materiais do Kit" style="object-fit:contain;background:#fff"><p><b>O Kit completo</b><br>vídeos e materiais em PDF na área de membros</p></div>
-      </div>
-      <div class="setas"><button type="button" aria-label="Anterior" data-dir="-1">‹</button><button type="button" aria-label="Próximo" data-dir="1">›</button></div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== ENTREGÁVEIS ===== -->
-<section class="sec-branca" id="entregaveis">
+<section class="sec-rosa" id="entregaveis">
   <div class="w">
     <h2>Libere seu acesso hoje e receba tudo isso</h2>
     <div class="grid2">
@@ -371,18 +398,36 @@ footer p{margin:0 0 8px}
   </div>
 </section>
 
+<!-- ===== CARROSSEL ===== -->
+<section class="sec-branca" id="carrossel">
+  <div class="w">
+    <h2>Tudo chega no seu e-mail em poucos minutos</h2>
+    <div class="carr">
+      <div class="track" id="track" data-auto="3600">
+        <div class="slide"><img src="img/entregavel-3-pratica.webp" alt="Prática Guiada Detox do Ex"><p><b>Prática Guiada Detox do Ex</b><br>vídeo de 13 minutos, o mesmo todos os dias</p></div>
+        <div class="slide"><img src="img/entregavel-1-aula.webp" alt="Aula Como funciona o Apego"><p><b>Aula: Como funciona o Apego</b><br>vídeo de 7 minutos</p></div>
+        <div class="slide"><img src="img/entregavel-2-guia.webp" alt="Guia de Preparação"><p><b>Guia de Preparação para a Prática</b><br>vídeo de 7 minutos e 2 materiais para imprimir</p></div>
+        <div class="slide"><img src="img/bonus-17-afirmacoes.webp" alt="As 17 Afirmações do Desapego Emocional"><p><b>Bônus: As 17 Afirmações do Desapego Emocional</b><br>para ler todos os dias</p></div>
+        <div class="slide"><img src="img/tudao-mockups.webp" alt="Todos os materiais do Kit" style="object-fit:contain;background:#fff"><p><b>O Kit completo</b><br>vídeos e materiais em PDF na área de membros</p></div>
+      </div>
+      <div class="setas"><button type="button" aria-label="Anterior" data-dir="-1">‹</button><button type="button" aria-label="Próximo" data-dir="1">›</button></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== OFERTA ===== -->
 <section class="sec-rosa oferta" id="oferta">
   <div class="w">
     <h2>Quanto vale parar de alimentar isso?</h2>
     <p class="lead">Uma sessão de terapia custa, em média, mais do que o Kit inteiro, e você vai precisar de várias. Aqui são 7 dias, 13 minutos por dia, com a Durga conduzindo do começo ao fim.</p>
+    <figure class="mock" id="mock"><img src="img/mockup-preco.webp" alt="O Kit no notebook, no celular com fone e o Diário de Bordo impresso" width="420" height="415"></figure>
     <div class="preco-box">
       <div class="apenas">Apenas 12x de</div>
       <div class="valor"><sup>R$</sup>8<small>,99</small></div>
       <div class="avista">ou R$ 87 à vista</div>
       <p class="just">Pagamento único. Não é assinatura e não renova. Acesso no e-mail em poucos minutos, e dá para fazer o primeiro dia hoje à noite.</p>
       <a class="cta" id="cta-checkout" href="https://pay.hotmart.com/A107709663B?off=rrm3avff&checkoutMode=10&src=v8kit&sck=v8kit_oferta" data-cta="oferta_checkout" rel="noopener">Quero acessar agora</a>
-      <p class="cta-sub">Cartão, Pix ou boleto &nbsp;·&nbsp; ambiente seguro da Hotmart</p>
+      <p class="cta-sub">Cartão ou Pix &nbsp;·&nbsp; ambiente seguro da Hotmart</p>
     </div>
     <div class="risco">
       <img src="img/selo_garantia_7dias.webp" alt="Garantia de 7 dias" width="72" height="72">
@@ -401,8 +446,14 @@ footer p{margin:0 0 8px}
   <div class="w bio">
     <img src="img/durga.webp" alt="Durga Shakti" width="200" height="267">
     <h2 style="margin-bottom:0">Quem criou o Kit</h2>
-    <p>Sou a Durga Shakti, terapeuta há 18 anos. Eu sofri tanto com o fim de um relacionamento que chorei todos os dias durante seis meses. Levei quase um ano para encontrar, sozinha, o caminho de volta.</p>
-    <p>Foi esse sofrimento que me levou a virar terapeuta. Hoje estou há doze anos com um homem que me ama e me respeita. O Kit Detox do Ex é o atalho que eu não tive: 13 minutos por dia, durante 7 dias, com a minha voz conduzindo você do começo ao fim.</p>
+    <ul class="cred">
+      <li><b>Durga Shakti</b>, terapeuta há 18 anos</li>
+      <li>Criadora da Escola de Alquimia Ascensional, autora e professora</li>
+      <li>Passou pelo que você está passando: chorou todos os dias durante seis meses depois de um término</li>
+      <li>Levou quase um ano para encontrar, sozinha, o caminho de volta</li>
+      <li>Há doze anos com um homem que a ama e a respeita</li>
+    </ul>
+    <p>“O Kit Detox do Ex é o atalho que eu não tive: 13 minutos por dia, durante 7 dias, com a minha voz conduzindo você do começo ao fim.”</p>
   </div>
 </section>
 
@@ -466,7 +517,7 @@ footer p{margin:0 0 8px}
   var A = ANG[a];
   document.getElementById("h1").textContent = A.h1;
   document.getElementById("sub").textContent = A.sub;
-  var lista = document.getElementById("lista"), li = lista.querySelector('li[data-k="'+A.k+'"]');
+  var lista = document.getElementById("lista"), li = lista.querySelector('.esp[data-k="'+A.k+'"]');
   if(li){ li.classList.add("destaque"); lista.insertBefore(li, lista.firstElementChild); }
   if(window.clarity){ clarity("set","angulo",a); }
   if(window.gtag){ gtag("event","angulo_pagina",{angulo:a}); }
@@ -474,10 +525,21 @@ footer p{margin:0 0 8px}
   var ck = document.getElementById("cta-checkout");
   if(ck){ ck.href = ck.href.replace(/sck=[^&]*/, "sck=v8kit_"+a+"_oferta"); }
 
-  /* ---------- carrossel ---------- */
-  var track = document.getElementById("track");
-  document.querySelectorAll(".setas button").forEach(function(b){
-    b.addEventListener("click", function(){ var w = track.firstElementChild.getBoundingClientRect().width + 12; track.scrollBy({left: w*(+b.getAttribute("data-dir")), behavior:"smooth"}); });
+  /* ---------- carrosséis: setas + avanço automático (pausa no toque e fora da tela) ---------- */
+  document.querySelectorAll(".carr").forEach(function(c){
+    var track = c.querySelector(".track"); if(!track) return;
+    function step(dir){ var w = track.firstElementChild.getBoundingClientRect().width + 12;
+      var max = track.scrollWidth - track.clientWidth;
+      if(dir>0 && track.scrollLeft >= max-4) track.scrollTo({left:0, behavior:"smooth"});
+      else track.scrollBy({left: w*dir, behavior:"smooth"}); }
+    c.querySelectorAll(".setas button").forEach(function(b){ b.addEventListener("click", function(){ step(+b.getAttribute("data-dir")); pausa(6000); }); });
+    var ms = +track.getAttribute("data-auto"); if(!ms) return;
+    var timer = null, visivel = false, ateh = 0;
+    function pausa(t){ ateh = Date.now() + t; }
+    function tick(){ if(visivel && Date.now() > ateh && !document.hidden) step(1); }
+    ["touchstart","pointerdown","wheel"].forEach(function(ev){ track.addEventListener(ev, function(){ pausa(7000); }, {passive:true}); });
+    if("IntersectionObserver" in window){ new IntersectionObserver(function(es){ visivel = es[0].isIntersecting; }, {threshold:.3}).observe(c); } else { visivel = true; }
+    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches) timer = setInterval(tick, ms);
   });
 
   /* ---------- eventos (mesmos nomes da v6/v7) ---------- */
